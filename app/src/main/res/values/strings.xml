@@ -1,0 +1,13 @@
+<resources>
+  <string name="app_name_debug" translatable="false">Fawry</string>
+  <string name="app_name" translatable="false">Fawry</string>
+
+  <!-- General Strings -->
+  <string name="empty_warning">This field is required</string>
+  <string name="connection_error">Connection Error</string>
+  <string name="no_internet">No internet connection please try again later</string>
+  <string name="retry">Retry</string>
+  <string name="cancel">Cancel</string>
+  <string name="some_error">Some error occurred, try again later</string>
+
+</resources>

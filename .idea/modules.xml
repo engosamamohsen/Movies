@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Fawry.iml" filepath="$PROJECT_DIR$/.idea/modules/Fawry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Fawry.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Fawry.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Fawry.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Fawry.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fawry/Fawry.fawry.iml" filepath="$PROJECT_DIR$/.idea/modules/fawry/Fawry.fawry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/prettyPopUp/Fawry.prettyPopUp.iml" filepath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Fawry.prettyPopUp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/prettyPopUp/Fawry.prettyPopUp.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Fawry.prettyPopUp.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/prettyPopUp/Fawry.prettyPopUp.main.iml" filepath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Fawry.prettyPopUp.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/prettyPopUp/Fawry.prettyPopUp.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Fawry.prettyPopUp.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fawry.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/fawry.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fawry.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fawry.buildSrc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fawry.buildSrc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fawry.buildSrc.test.iml" />
+    </modules>
+  </component>
+</project>

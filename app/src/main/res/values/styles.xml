@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <!-- Base application theme. -->
+  <style name="Theme.AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <!-- Primary brand color. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryVariant">@color/white</item>
+    <item name="colorOnPrimary">@color/white</item>
+    <!-- Secondary brand color. -->
+    <item name="colorSecondaryVariant">@color/colorAccentDark</item>
+    <item name="colorOnSecondary">@color/colorAccentDark</item>
+    <!-- Status bar color. -->
+    <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+    <!-- App Font -->
+
+    <item name="android:windowContentTransitions">true</item>
+
+    <item name="android:windowActionBarOverlay">true</item>
+    <item name="android:dialogTheme">@style/PauseDialog</item>
+    <item name="android:windowDisablePreview">true</item>
+  </style>
+
+
+  <style name="progressAccent" parent="ThemeOverlay.AppCompat.Light">
+    <item name="colorAccent">@color/colorPrimary</item>
+  </style>
+  <style name="ToolbarColoredBackArrow" parent="Theme.AppTheme">
+    <item name="android:textColorSecondary">@color/colorPrimary</item>
+  </style>
+
+  <style name="ThemeOverlay.App.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorSurface">@color/transparent</item>
+    <item name="colorOnSurface">@color/white</item>
+    <item name="listPreferredItemHeightSmall">@dimen/dimen60</item>
+  </style>
+
+  <style name="CustomDialogAnimation" parent="Theme.MaterialComponents.DayNight.Dialog.Bridge">
+    <item name="android:windowNoTitle">true</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorPrimary">@color/colorPrimary</item>
+
+    <item name="android:windowActivityTransitions">true</item>
+
+    <!-- Additionally if you want animations when dialog opening -->
+    <!--    <item name="android:windowEnterAnimation">@anim/slide_up</item>-->
+    <!--    <item name="android:windowExitAnimation">@anim/slide_down</item>-->
+  </style>
+
+  <style name="PauseDialogAnimation">
+    <item name="android:windowEnterAnimation">@anim/anim_slide_in_left</item>
+    <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+  </style>
+
+  <style name="PauseDialog" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+    <item name="android:windowAnimationStyle">@style/PauseDialogAnimation</item>
+    <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+    <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+  </style>
+
+
+
+</resources>

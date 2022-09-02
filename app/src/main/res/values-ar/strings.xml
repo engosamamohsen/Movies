@@ -1,0 +1,10 @@
+<resources>
+  <!-- General Strings -->
+  <string name="empty_warning">هذا الحقل مطلوب </string>
+  <string name="connection_error">خطأ فى الاتصال</string>
+  <string name="no_internet">لا يوجد اتصال بالانترنت، برجاء المحاولة فى وقت لاحق</string>
+  <string name="retry">إعادة المحاولة</string>
+  <string name="cancel">إلغاء</string>
+  <string name="some_error">حدث خطأ ما، برجاء المحاولة فى وقت لاحق</string>
+
+</resources>

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "Checking code formatting..."
+
+./gradlew ktlintFormat ktlintCheck --daemon
+
+status=$?
+
+[ $status -ne 0 ] && exit 1
+exit 0
