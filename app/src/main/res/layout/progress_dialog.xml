@@ -8,27 +8,15 @@
   android:elevation="4dp"
   android:gravity="center"
   android:orientation="vertical"
-  android:padding="@dimen/dimen24"
-  tools:targetApi="lollipop">
+  android:padding="@dimen/dimen24">
 
-<!--  <com.airbnb.lottie.LottieAnimationView-->
-<!--      android:layout_width="@dimen/dimen60"-->
-<!--    android:layout_height="@dimen/dimen60"-->
-<!--    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--    app:layout_constraintEnd_toEndOf="parent"-->
-<!--    app:layout_constraintStart_toStartOf="parent"-->
-<!--    app:layout_constraintTop_toTopOf="parent"-->
-<!--    app:lottie_autoPlay="true"-->
-<!--    app:lottie_fileName="loading.json"-->
-<!--    app:lottie_loop="true" />-->
-
-<!--  <TextView-->
-<!--    android:id="@+id/tv_hint"-->
-<!--    android:layout_width="wrap_content"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:layout_marginTop="@dimen/dimen7"-->
-<!--    android:gravity="center"-->
-<!--    android:textColor="@color/black"-->
-<!--    android:visibility="gone" />-->
+  <ProgressBar
+    android:id="@+id/progress"
+    android:layout_width="@dimen/dimen50"
+    android:layout_height="@dimen/dimen50"
+    app:layout_constraintBottom_toBottomOf="@+id/image_movie"
+    app:layout_constraintEnd_toEndOf="@+id/image_movie"
+    app:layout_constraintStart_toStartOf="@+id/image_movie"
+    app:layout_constraintTop_toTopOf="@+id/image_movie" />
 
 </LinearLayout>

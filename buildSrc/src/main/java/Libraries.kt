@@ -33,6 +33,11 @@ object Libraries {
   const val chuckLogging = "com.readystatesoftware.chuck:library:${Versions.chuckLogging}"
   const val alerter = "com.github.tapadoo:alerter:${Versions.alerter}"
 
+  //Image
+  const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+  const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
+
+
   // UI
   const val materialDesign = "com.google.android.material:material:${Versions.materialDesign}"
   const val navigationFragment =

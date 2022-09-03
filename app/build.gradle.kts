@@ -114,6 +114,11 @@ dependencies {
   implementation(Libraries.coroutinesCore)
   implementation(Libraries.coroutinesAndroid)
 
+
+  //glide
+  implementation (Libraries.glide)
+  annotationProcessor (Libraries.glideCompiler)
+
   // UI
   implementation(Libraries.materialDesign)
   implementation(Libraries.navigationFragment)

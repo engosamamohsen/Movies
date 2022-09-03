@@ -2,6 +2,8 @@ package app.fawry.task.core.di.module
 
 import app.fawry.task.domain.category.repository.CategoryRepository
 import app.fawry.task.domain.category.use_case.CategoryUseCase
+import app.fawry.task.domain.movie.repository.MovieRepository
+import app.fawry.task.domain.movie.use_case.MovieUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,4 +20,10 @@ class UseCaseModule {
   fun provideHomeUseCase(
     repository: CategoryRepository
   ): CategoryUseCase = CategoryUseCase(repository)
+
+  @Provides
+  @Singleton
+  fun provideMovieUseCase(
+    repository: MovieRepository
+  ): MovieUseCase = MovieUseCase(repository)
 }

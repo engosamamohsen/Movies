@@ -1,6 +1,7 @@
 package app.fawry.task.presentation.base.utils
 
 object Constants {
+  val IMAGE_PATH: String = "http://image.tmdb.org/t/p/w500"
   const val PICK_IMAGE = 1
   const val REGISTER = 2
   const val FORGET_PASSWORD = 3

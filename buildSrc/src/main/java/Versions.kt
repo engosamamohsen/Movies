@@ -30,6 +30,10 @@ object Versions {
   const val loadingAnimations = "3.6.0"
   const val alerter = "7.2.4"
 
+  //image
+  const val glide = "4.13.0"
+
+
   // Utils
   const val playServices = "19.2.0"
   const val multidex = "2.0.1"

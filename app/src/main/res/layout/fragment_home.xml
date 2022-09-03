@@ -17,7 +17,7 @@
       android:layout_height="match_parent">
 
       <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rc_suggested_groups"
+        android:id="@+id/rv_categories"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen10"
@@ -26,6 +26,21 @@
         app:span="@{`1`}"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_suggested_groups"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dimen10"
+        app:adapter="@{viewModel.adapterMovies}"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_categories"
+        app:orientation="@{`1`}"
+        app:span="@{`2`}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -2,7 +2,11 @@ package app.fawry.task.presentation.base.extensions
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.drawable.Drawable
+import android.util.Log
+import android.view.KeyCharacterMap.load
 import android.view.View
+import android.webkit.URLUtil
 import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.constraintlayout.widget.Group
@@ -10,7 +14,15 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
 import com.google.android.material.snackbar.Snackbar
+import com.structure.base_mvvm.R
+import java.io.File
 
 fun View.show() {
   if (visibility == View.VISIBLE) return
@@ -50,8 +62,58 @@ fun View.showSnackBar(
   value = ["app:loadImage", "app:progressBar", "app:placeHolder"],
   requireAll = false
 )
-fun ImageView.loadImage(imageUrl: String?, progressBar: ProgressBar?, placeholder: String?) {
+fun ImageView.loadImage(imageUrl: String?, progressBar: ProgressBar?, defaultImage: Any?) {
+  if (imageUrl != null && imageUrl.isNotEmpty()) {
+    if (URLUtil.isValidUrl(imageUrl)) {
+      Glide
+        .with(context)
+        .load(imageUrl)
+        .error(R.drawable.bg_no_image)
+        .listener(object : RequestListener<Drawable>{
+          override fun onLoadFailed(
+            e: GlideException?,
+            model: Any?,
+            target: Target<Drawable>?,
+            isFirstResource: Boolean
+          ): Boolean {
+            progressBar?.hide()
+            return false
+          }
 
+          override fun onResourceReady(
+            resource: Drawable?,
+            model: Any?,
+            target: Target<Drawable>?,
+            dataSource: DataSource?,
+            isFirstResource: Boolean
+          ): Boolean {
+            progressBar?.hide()
+            return false
+          }
+
+        })
+        .diskCacheStrategy(DiskCacheStrategy.DATA)
+        .into(this);
+
+
+    }else if(defaultImage != null) {
+      Glide
+        .with(context)
+        .load(defaultImage)
+        .error(R.drawable.bg_no_image)
+        .diskCacheStrategy(DiskCacheStrategy.DATA)
+        .into(this);
+    }
+  } else {
+    progressBar?.hide()
+    when (defaultImage) {
+      null -> {
+        setImageResource(R.drawable.bg_no_image)
+      }
+      is Int -> setImageResource(defaultImage)
+      is Drawable -> setImageDrawable(defaultImage)
+    }
+  }
 }
 
 @BindingAdapter("app:adapter", "app:span", "app:orientation")
