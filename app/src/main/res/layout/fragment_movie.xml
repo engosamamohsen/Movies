@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools">
+  xmlns:app="http://schemas.android.com/apk/res-auto">
 
   <data>
-
-    <import type="app.fawry.task.presentation.base.utils.Constants" />
-
     <variable
       name="movie"
-      type="app.fawry.task.domain.movie.entity.Movie" />
+      type="app.fawry.task.presentation.movie.ui_state.MovieUIState" />
   </data>
 
   <androidx.core.widget.NestedScrollView
@@ -31,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:loadImage="@{movie.posterPath}" />
+        app:loadImage="@{movie.moviePosterPath}" />
 
       <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_title"
@@ -41,7 +37,7 @@
         android:layout_margin="@dimen/dimen5"
         android:layout_marginTop="@dimen/dimen5"
         android:gravity="start"
-        android:text="@{movie.title}"
+        android:text="@{movie.movieTitle}"
         android:textColor="@color/colorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/img_poster" />
 
@@ -54,7 +50,7 @@
         android:layout_margin="@dimen/dimen5"
         android:layout_marginTop="@dimen/dimen5"
         android:gravity="start"
-        android:text="@{movie.overview}"
+        android:text="@{movie.movieOverview}"
         android:textColor="@color/colorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
@@ -66,7 +62,7 @@
         android:layout_margin="@dimen/dimen5"
         android:layout_marginTop="@dimen/dimen5"
         android:gravity="start"
-        android:text="@{@string/release.concat(` `+movie.releaseDate)}"
+        android:text="@{movie.getMovieReleaseDate(context)}"
         android:textColor="@color/colorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/tv_overview" />
 

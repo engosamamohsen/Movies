@@ -1,10 +1,10 @@
-
 plugins {
   id(Config.Plugins.androidApplication)
   id(Config.Plugins.kotlinAndroid)
   id(Config.Plugins.kotlinKapt)
   id(Config.Plugins.navigationSafeArgs)
   id(Config.Plugins.hilt)
+  id(Config.Plugins.extensions)
 //  id(Config.Plugins.google_services)
 }
 

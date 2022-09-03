@@ -3,15 +3,6 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools">
 
-  <data>
-
-    <import type="app.fawry.task.presentation.base.utils.Constants" />
-
-    <variable
-      name="viewModel"
-      type="app.fawry.task.presentation.home.list.viewModels.HomeViewModel" />
-  </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent">
@@ -21,26 +12,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen10"
-        app:adapter="@{viewModel.adapter}"
-        app:orientation="@{`2`}"
-        app:span="@{`1`}"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        tools:listitem="@layout/item_category"
+        />
 
 
       <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rc_suggested_groups"
+        android:id="@+id/rv_movies"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="@dimen/dimen10"
-        app:adapter="@{viewModel.adapterMovies}"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_categories"
-        app:orientation="@{`1`}"
-        app:span="@{`2`}" />
+        tools:listitem="@layout/item_movie"
+        app:spanCount="2"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/rv_categories" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

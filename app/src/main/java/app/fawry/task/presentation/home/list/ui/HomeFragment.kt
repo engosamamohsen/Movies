@@ -11,6 +11,7 @@ import com.structure.base_mvvm.R
 import app.fawry.task.presentation.base.BaseFragment
 import app.fawry.task.presentation.base.extensions.handleApiError
 import app.fawry.task.presentation.base.extensions.hideKeyboard
+import app.fawry.task.presentation.base.extensions.setUpAdapter
 import app.fawry.task.presentation.base.utils.showMessage
 import app.fawry.task.presentation.home.list.event.MovieUiEvent
 import app.fawry.task.presentation.home.list.viewModels.HomeViewModel
@@ -31,8 +32,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() , MovieUiEvent{
 
   override
   fun setBindingVariables() {
-    binding.viewModel = viewModel
     viewModel.adapterMovies.movieUIEvent = this
+    binding.rvCategories.setUpAdapter(viewModel.adapter,"1","2")
+    binding.rvMovies.setUpAdapter(viewModel.adapterMovies,"2","1")
   }
   override fun setupObservers() {
     super.setupObservers()

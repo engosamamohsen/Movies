@@ -4,7 +4,7 @@ object Config {
     const val compileSdkVersion = 31
     const val minSdkVersion = 23
     const val versionCode = 1
-    const val versionName = "1"
+    const val versionName = "0.0.1"
     const val testRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
 
@@ -28,10 +28,11 @@ object Config {
     const val ktLint = "org.jlleitschuh.gradle.ktlint"
     const val google_services = "com.google.gms.google-services"
     const val proto_buf = "com.google.protobuf"
+    const val extensions = "kotlin-android-extensions"
   }
 
   object Environments {
-    const val roomDb = "\"example_db\""
+    const val roomDb = "\"fawry_db\""
     const val debugBaseUrl = "\"https://api.themoviedb.org/3/\""
     const val releaseBaseUrl = "\"https://api.themoviedb.org/3/\""
     const val APIKEY = "\"c50f5aa4e7c95a2a553d29b81aad6dd0\""

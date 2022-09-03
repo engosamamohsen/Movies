@@ -114,6 +114,20 @@ fun ImageView.loadImage(imageUrl: String?, progressBar: ProgressBar?, defaultIma
   }
 }
 
+fun RecyclerView.setUpAdapter(
+  itemsAdapter: RecyclerView.Adapter<*>?,
+  spanCount: String,
+  orientation: String
+) {
+  if (orientation == "1") initVerticalRV(
+    this,
+    this.context,
+    spanCount.toInt()
+  ) else initHorizontalRV(this, this.context, spanCount.toInt())
+  this.adapter = itemsAdapter
+
+}
+
 @BindingAdapter("app:adapter", "app:span", "app:orientation")
 fun getItemsV2Binding(
   recyclerView: RecyclerView,

@@ -1,92 +1,65 @@
 package app.fawry.task.domain.movie.entity
 
 
-import android.os.Parcel
 import android.os.Parcelable
-import com.google.gson.annotations.SerializedName
 import androidx.annotation.Keep
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
-import java.io.Serializable
+import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
-@Entity(
-  tableName = "movie",
-)
 /** room movie structure(roomId - id - details [string of object movie]) **/
+@Entity(tableName = "movie")
 @Keep
+@Parcelize
 data class Movie(
   @PrimaryKey(autoGenerate = true)
-  val roomId: Int? = null,
+  var roomId: Int = 0,
   @SerializedName("id")
   @ColumnInfo(name = "id")
   @Expose var id: Int = 0,
   @ColumnInfo(name = "details")
   var details: String = "",
   @SerializedName("adult")
+  @Ignore
   @Expose val adult: Boolean = false,
   @SerializedName("backdrop_path")
+  @Ignore
   @Expose val backdropPath: String = "",
   @SerializedName("genre_ids")
+  @Ignore
   @Expose val genreIds: List<Int> = listOf(),
   @SerializedName("original_language")
+  @Ignore
   @Expose val originalLanguage: String = "",
   @SerializedName("original_title")
+  @Ignore
   @Expose val originalTitle: String = "",
   @SerializedName("overview")
+  @Ignore
   @Expose var overview: String = "",
   @SerializedName("popularity")
+  @Ignore
   @Expose var popularity: Double = 0.0,
   @SerializedName("poster_path")
+  @Ignore
   @Expose var posterPath: String = "",
   @SerializedName("release_date")
+  @Ignore
   @Expose var releaseDate: String = "",
   @SerializedName("title")
+  @Ignore
   @Expose var title: String = "",
   @SerializedName("video")
+  @Ignore
   @Expose val video: Boolean = false,
   @SerializedName("vote_average")
+  @Ignore
   @Expose var voteAverage: Double = 0.0,
   @SerializedName("vote_count")
+  @Ignore
   @Expose var voteCount: Int = 0
-) : Parcelable {
-  constructor(parcel: Parcel) : this() {
-    title = parcel.readString().toString()
-    posterPath = parcel.readString().toString()
-    releaseDate = parcel.readString().toString()
-    overview = parcel.readString().toString()
-    voteAverage = parcel.readDouble()
-    popularity = parcel.readDouble()
-    voteCount = parcel.readInt()
-    id = parcel.readInt()
-  }
-
-  override fun describeContents(): Int {
-    return 0
-  }
-
-  override fun writeToParcel(p0: Parcel?, p1: Int) {
-    p0?.apply {
-      this.writeString(title)
-      this.writeString(posterPath)
-      this.writeString(releaseDate)
-      this.writeString(overview)
-      this.writeDouble(voteAverage)
-      this.writeDouble(popularity)
-      this.writeInt(voteCount)
-      this.writeInt(id)
-    }
-  }
-
-  companion object CREATOR : Parcelable.Creator<Movie> {
-    override fun createFromParcel(parcel: Parcel): Movie {
-      return Movie(parcel)
-    }
-
-    override fun newArray(size: Int): Array<Movie?> {
-      return arrayOfNulls(size)
-    }
-  }
-
-}
+) : Parcelable
