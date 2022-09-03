@@ -15,43 +15,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2acd581a-7240-49ed-9ba8-8ae3644f0430" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/movie/ui/MovieFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_movie.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/category/data_source/local/CategoryDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/category/data_source/local/CategoryLocalDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/movie/data_source/local/MovieDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/movie/data_source/local/MovieLocalDataSource.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/category/data_source/remote/MovieServices.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/category/data_source/remote/MovieServices.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/remote/BaseRemoteDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/data/remote/BaseRemoteDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/category/entity/Category.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/category/entity/Category.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/movie/entity/Movie.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/movie/entity/Movie.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/utils/BaseResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/utils/BaseResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/utils/FailureStatus.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/domain/utils/FailureStatus.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/FragmentExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/FragmentExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/ViewExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/base/extensions/ViewExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/home/list/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/home/list/ui/HomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/home/list/event/MovieUiEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/home/list/event/MovieUiEvent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/home/list/viewModels/HomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/fawry/task/presentation/home/list/viewModels/HomeViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/20220902_17661079332372056480.compiler.options" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/20220902_18148371909291360207.compiler.options" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/20220903_18354066125060309659.compiler.options" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/libs/buildSrc.jar" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/libs/buildSrc.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/source-roots/buildSrc/source-roots.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,10 +67,11 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/app/fawry/task/core/di/room" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\20115\Desktop\projects\fawry\app\src\main\java\app\fawry\task\core\di\room" />
       <recent name="C:\Users\20115\Desktop\projects\fawry\app\src\main\res\layout" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -110,11 +81,11 @@
       <recent name="app.fawry.task.presentation.home.list.adapter" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="app.fawry.task.data.movie.data_source.local" />
+      <recent name="app.fawry.task.data.category.data_source.local" />
       <recent name="app.fawry.task.presentation.movie" />
       <recent name="app.fawry.task.presentation.home.list.adapter" />
       <recent name="app.fawry.task.data.movie.data_source.remote" />
-      <recent name="app.fawry.task.data.movie.repository" />
-      <recent name="app.fawry.task.domain.movie.use_case" />
     </key>
   </component>
   <component name="RunManager">

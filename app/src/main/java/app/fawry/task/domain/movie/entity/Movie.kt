@@ -5,40 +5,52 @@ import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import androidx.annotation.Keep
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
 import java.io.Serializable
 
+@Entity(
+  tableName = "movie",
+)
+/** room movie structure(roomId - id - details [string of object movie]) **/
 @Keep
 data class Movie(
-  @SerializedName("adult")
-    @Expose val adult: Boolean = false,
-  @SerializedName("backdrop_path")
-    @Expose val backdropPath: String = "",
-  @SerializedName("genre_ids")
-    @Expose val genreIds: List<Int> = listOf(),
+  @PrimaryKey(autoGenerate = true)
+  val roomId: Int? = null,
   @SerializedName("id")
-    @Expose var id: Int = 0,
+  @ColumnInfo(name = "id")
+  @Expose var id: Int = 0,
+  @ColumnInfo(name = "details")
+  var details: String = "",
+  @SerializedName("adult")
+  @Expose val adult: Boolean = false,
+  @SerializedName("backdrop_path")
+  @Expose val backdropPath: String = "",
+  @SerializedName("genre_ids")
+  @Expose val genreIds: List<Int> = listOf(),
   @SerializedName("original_language")
-    @Expose val originalLanguage: String = "",
+  @Expose val originalLanguage: String = "",
   @SerializedName("original_title")
-    @Expose val originalTitle: String = "",
+  @Expose val originalTitle: String = "",
   @SerializedName("overview")
-    @Expose var overview: String = "",
+  @Expose var overview: String = "",
   @SerializedName("popularity")
-    @Expose var popularity: Double = 0.0,
+  @Expose var popularity: Double = 0.0,
   @SerializedName("poster_path")
-    @Expose var posterPath: String = "",
+  @Expose var posterPath: String = "",
   @SerializedName("release_date")
-    @Expose var releaseDate: String = "",
+  @Expose var releaseDate: String = "",
   @SerializedName("title")
-    @Expose var title: String = "",
+  @Expose var title: String = "",
   @SerializedName("video")
-    @Expose val video: Boolean = false,
+  @Expose val video: Boolean = false,
   @SerializedName("vote_average")
-    @Expose var voteAverage: Double = 0.0,
+  @Expose var voteAverage: Double = 0.0,
   @SerializedName("vote_count")
-    @Expose var voteCount: Int = 0
-) : Parcelable{
+  @Expose var voteCount: Int = 0
+) : Parcelable {
   constructor(parcel: Parcel) : this() {
     title = parcel.readString().toString()
     posterPath = parcel.readString().toString()
