@@ -9,6 +9,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+/** provide Module AppPreferences for Application Context **/
 @Module
 @InstallIn(SingletonComponent::class)
 object AppPreferencesModule {

@@ -5,7 +5,7 @@ plugins {
   id(Config.Plugins.kotlinKapt)
   id(Config.Plugins.navigationSafeArgs)
   id(Config.Plugins.hilt)
-  id(Config.Plugins.google_services)
+//  id(Config.Plugins.google_services)
 }
 
 android {
@@ -31,6 +31,7 @@ android {
       manifestPlaceholders["appRoundIcon"] = "@mipmap/ic_launcher_round_debug"
       buildConfigField("String", "API_BASE_URL", Config.Environments.debugBaseUrl)
       buildConfigField("String", "ROOM_DB", Config.Environments.roomDb)
+      buildConfigField("String", "APIKEY", Config.Environments.APIKEY)
     }
 
     signingConfigs {
@@ -55,6 +56,7 @@ android {
 
       buildConfigField("String", "API_BASE_URL", Config.Environments.releaseBaseUrl)
       buildConfigField("String", "ROOM_DB", Config.Environments.roomDb)
+      buildConfigField("String", "APIKEY", Config.Environments.APIKEY)
     }
   }
 
@@ -90,7 +92,7 @@ dependencies {
   implementation(Libraries.chuckLogging)
 
   // Utils
-  implementation(Libraries.playServices)
+//  implementation(Libraries.playServices)
   implementation(Libraries.multidex)
   implementation(Libraries.gson)
 

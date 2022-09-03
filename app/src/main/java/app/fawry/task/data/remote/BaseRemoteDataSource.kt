@@ -16,19 +16,6 @@ import javax.inject.Inject
 
 open class BaseRemoteDataSource @Inject constructor() {
   var gson: Gson = Gson()
-  protected fun getParameters(requestData: Any): Map<String, String> {
-    val params: MutableMap<String, String> = HashMap()
-    try {
-      val jsonObject = JSONObject(gson.toJson(requestData))
-      for (i in 0 until jsonObject.names().length()) {
-        params[jsonObject.names().getString(i)] =
-          jsonObject[jsonObject.names().getString(i)].toString() + ""
-      }
-    } catch (e: Exception) {
-      e.stackTrace
-    }
-    return params
-  }
 
   suspend fun <T> safeApiCall(apiCall: suspend () -> T): Resource<T> {
     println(apiCall)

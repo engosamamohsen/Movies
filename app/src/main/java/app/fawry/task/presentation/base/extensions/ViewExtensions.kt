@@ -30,14 +30,6 @@ fun View.hide() {
   }
 }
 
-@BindingAdapter("app:goneUnless")
-fun View.goneUnless(visible: Boolean) {
-  visibility = if (visible) View.VISIBLE else View.GONE
-  if (this is Group) {
-    this.requestLayout()
-  }
-}
-
 fun View.showSnackBar(
   message: String,
   retryActionName: String? = null,

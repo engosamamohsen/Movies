@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.tapadoo:alerter:7.2.4@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e928c0fcfb633588ed8763168f94bbf8/transformed/jetified-alerter-7.2.4/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e928c0fcfb633588ed8763168f94bbf8/transformed/jetified-alerter-7.2.4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e928c0fcfb633588ed8763168f94bbf8/transformed/jetified-alerter-7.2.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5bee1727aeef33c66558eb1ce09f80c7/transformed/jetified-alerter-7.2.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/5bee1727aeef33c66558eb1ce09f80c7/transformed/jetified-alerter-7.2.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5bee1727aeef33c66558eb1ce09f80c7/transformed/jetified-alerter-7.2.4/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.tapadoo/alerter/7.2.4/d6db5b6c2b75dd46806019d5c198e8043e2b74f4/alerter-7.2.4-javadoc.jar!/" />

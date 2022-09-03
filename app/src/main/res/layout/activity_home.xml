@@ -10,9 +10,10 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/transparent"
+        android:background="@color/colorPrimary"
         app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@color/colorPrimary"
+        app:titleTextColor="@color/white"
+
         app:titleCentered="true" />
 
       <androidx.fragment.app.FragmentContainerView

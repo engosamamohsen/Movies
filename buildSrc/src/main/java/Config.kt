@@ -32,7 +32,8 @@ object Config {
 
   object Environments {
     const val roomDb = "\"example_db\""
-    const val debugBaseUrl = "\"https://example-debug.com/\""
-    const val releaseBaseUrl = "\"https://example-release.com/\""
+    const val debugBaseUrl = "\"https://api.themoviedb.org/3/\""
+    const val releaseBaseUrl = "\"https://api.themoviedb.org/3/\""
+    const val APIKEY = "\"c50f5aa4e7c95a2a553d29b81aad6dd0\""
   }
 }

@@ -1,7 +1,9 @@
 package app.fawry.task.presentation.home.list
 
+import android.util.Log
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import app.fawry.task.domain.category.entity.Category
 import app.fawry.task.domain.utils.Resource
 import com.structure.base_mvvm.R
 import app.fawry.task.presentation.base.BaseFragment
@@ -10,10 +12,9 @@ import app.fawry.task.presentation.base.extensions.hideKeyboard
 import app.fawry.task.presentation.home.list.viewModels.HomeViewModel
 import com.structure.base_mvvm.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
-class HomeFragment : BaseFragment<FragmentHomeBinding>() {
+class HomeFragment : BaseFragment<FragmentHomeBinding>(){
 
   private val viewModel: HomeViewModel by viewModels()
 
@@ -27,24 +28,27 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
   override fun setupObservers() {
     super.setupObservers()
     lifecycleScope.launchWhenResumed {
-      viewModel.usersResponse.collect {
+      viewModel.categoryResponse.collect {
         when (it) {
           Resource.Loading -> {
             hideKeyboard()
             showLoading()
           }
           is Resource.Success -> {
-//            Log.d(TAG, "setupObservers: ${it.value.size}")
             hideLoading()
+            viewModel.setData(it.value.categories)
           }
           is Resource.Failure -> {
             hideLoading()
             handleApiError(it)
           }
+          else -> {}
         }
       }
     }
 
   }
+
+  private  val TAG = "HomeFragment"
 
 }

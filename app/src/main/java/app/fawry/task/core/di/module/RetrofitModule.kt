@@ -25,18 +25,24 @@ object RetrofitModule {
 
   const val REQUEST_TIME_OUT: Long = 60
 
+  /**Add Query Parameter for api-key in BuildConfig instead of send every time in each request**/
   @Provides
   @Singleton
   fun provideHeadersInterceptor(appPreferences: AppPreferences) = run {
     Interceptor { chain ->
-      chain.proceed(
-        chain.request().newBuilder()
-          .addHeader("Accept", "application/json")
+      var request = chain.request()
+      request = request.newBuilder().url(
+        request.url.newBuilder()
+          .addQueryParameter("api_key", BuildConfig.APIKEY)
           .build()
+      ).build()
+      chain.proceed(
+        request
       )
     }
   }
 
+  /**Add Body for Requesting & Response in Debug Mode Only**/
   @Provides
   @Singleton
   fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
@@ -44,6 +50,14 @@ object RetrofitModule {
     logging.level = HttpLoggingInterceptor.Level.BODY
     return logging
   }
+
+  /**
+   * BuildConfig (Debug Mode - Release Mode)
+   * Set Connection for (connecting & reading) TimeOut (debug-release)
+   * add logging HttpLoggingInterceptor for show (request - response) Body (debug)
+   * add ChuckInterceptor for notification for each request (debug)
+   * */
+
 
   @Provides
   @Singleton
@@ -78,6 +92,7 @@ object RetrofitModule {
       .create()
   }
 
+  /** Add Json Converter **/
   @Provides
   @Singleton
   fun provideRetrofit(gson: Gson, okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()

@@ -21,6 +21,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen10"
+        app:adapter="@{viewModel.adapter}"
+        app:orientation="@{`2`}"
+        app:span="@{`1`}"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintTop_toTopOf="parent" />
 
