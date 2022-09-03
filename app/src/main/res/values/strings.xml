@@ -9,5 +9,6 @@
   <string name="retry">Retry</string>
   <string name="cancel">Cancel</string>
   <string name="some_error">Some error occurred, try again later</string>
+  <string name="release">Release Date:</string>
 
 </resources>

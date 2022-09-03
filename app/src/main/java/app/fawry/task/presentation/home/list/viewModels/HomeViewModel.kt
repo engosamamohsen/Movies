@@ -15,7 +15,11 @@ import app.fawry.task.presentation.home.list.adapter.CategoriesAdapter
 import app.fawry.task.presentation.home.list.adapter.MoviesAdapter
 import com.structure.base_mvvm.BR
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -26,6 +30,7 @@ class HomeViewModel @Inject constructor(
   private val TAG = "HomeViewModel"
   /** collect categories api for listening in fragment **/
   val categoryResponse = MutableStateFlow<Resource<CategoryResponse>>(Resource.Default)
+  /** collect movies api for listening in fragment **/
   val movieResponse = MutableStateFlow<Resource<MovieResponse>>(Resource.Default)
   @Bindable
   val adapter = CategoriesAdapter()
@@ -33,8 +38,8 @@ class HomeViewModel @Inject constructor(
   val adapterMovies = MoviesAdapter()
 
   init {
-    getCategories()
-    getMovies()
+    getCategories() //call categories api
+    getMovies()//call movies api
   }
 
   /** Get Categories Api using useCase invoke function **/
@@ -54,13 +59,12 @@ class HomeViewModel @Inject constructor(
 
   /**update data in category adapter**/
   fun setData(categories: List<Category>) {
-    adapter.update(categories)
-    notifyPropertyChanged(BR.adapter)
+      adapter.update(categories)
+      notifyPropertyChanged(BR.adapter)
   }
 
   /**update data in movies adapter**/
   fun updateMovies(movies: List<Movie>) {
-    Log.d(TAG, "updateMovies: DONE ${movies.size}")
     adapterMovies.update(movies)
     notifyPropertyChanged(BR.adapterMovies)
   }

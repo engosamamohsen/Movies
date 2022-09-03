@@ -6,5 +6,6 @@
   <string name="retry">إعادة المحاولة</string>
   <string name="cancel">إلغاء</string>
   <string name="some_error">حدث خطأ ما، برجاء المحاولة فى وقت لاحق</string>
+  <string name="release">تاريخ الإنتاج: </string>
 
 </resources>

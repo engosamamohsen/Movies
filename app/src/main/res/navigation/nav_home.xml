@@ -6,8 +6,24 @@
 
   <fragment
     android:id="@+id/homeFragment"
-    android:name="app.fawry.task.presentation.home.list.HomeFragment"
-    android:label="Home" />
+    android:name="app.fawry.task.presentation.home.list.ui.HomeFragment"
+    android:label="Home" >
+    <action
+      android:id="@+id/action_homeFragment_to_movieFragment"
+      app:enterAnim="@anim/anim_slide_in_right"
+      app:exitAnim="@anim/anim_slide_out_left"
+      app:popEnterAnim="@anim/anim_slide_in_left"
+      app:popExitAnim="@anim/anim_slide_out_right"
+      app:destination="@id/movieFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/movieFragment"
+    android:name="app.fawry.task.presentation.movie.ui.MovieFragment"
+    android:label="Movie Details" >
+    <argument
+      android:name="movie"
+      app:argType="app.fawry.task.domain.movie.entity.Movie" />
+  </fragment>
 
 
 </navigation>

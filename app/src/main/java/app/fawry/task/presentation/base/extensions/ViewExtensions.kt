@@ -92,7 +92,6 @@ fun ImageView.loadImage(imageUrl: String?, progressBar: ProgressBar?, defaultIma
           }
 
         })
-        .diskCacheStrategy(DiskCacheStrategy.DATA)
         .into(this);
 
 
@@ -101,7 +100,6 @@ fun ImageView.loadImage(imageUrl: String?, progressBar: ProgressBar?, defaultIma
         .with(context)
         .load(defaultImage)
         .error(R.drawable.bg_no_image)
-        .diskCacheStrategy(DiskCacheStrategy.DATA)
         .into(this);
     }
   } else {

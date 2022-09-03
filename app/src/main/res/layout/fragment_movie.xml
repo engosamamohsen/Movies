@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <import type="app.fawry.task.presentation.base.utils.Constants" />
+
+    <variable
+      name="movie"
+      type="app.fawry.task.domain.movie.entity.Movie" />
+  </data>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dimen20"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_poster"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen250"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:loadImage="@{movie.posterPath}" />
+
+      <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen5"
+        android:layout_marginTop="@dimen/dimen5"
+        android:gravity="start"
+        android:text="@{movie.title}"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/img_poster" />
+
+
+      <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_overview"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen5"
+        android:layout_marginTop="@dimen/dimen5"
+        android:gravity="start"
+        android:text="@{movie.overview}"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+      <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_release_date"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen5"
+        android:layout_marginTop="@dimen/dimen5"
+        android:gravity="start"
+        android:text="@{@string/release.concat(` `+movie.releaseDate)}"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/tv_overview" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</layout>

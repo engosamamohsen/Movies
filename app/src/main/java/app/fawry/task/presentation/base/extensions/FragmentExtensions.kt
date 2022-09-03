@@ -7,6 +7,7 @@ import app.fawry.task.presentation.base.utils.hideSoftInput
 import app.fawry.task.presentation.base.utils.showNoApiErrorAlert
 import com.structure.base_mvvm.R
 
+//extention function for handling api error , network , status code request
 fun Fragment.handleApiError(
   failure: Failure,
   retryAction: (() -> Unit)? = null,
