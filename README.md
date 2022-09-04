@@ -26,5 +26,5 @@ For more references :
 - **remote-movies-list** Call Movies List Api with Update Data in UI view
 - **remote-movie-details** make parcelable model with sending list to movie details page
 - **room-structure** making room layer (Dao - AppDatabase - Entity)
-- **work-manager** caching data in room and create work manager every 4 hour call to call api
+- **work-manager** caching data in room and create work manager every 4 hour call api
 - **main** master of application
