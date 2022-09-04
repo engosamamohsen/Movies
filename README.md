@@ -13,3 +13,18 @@ For more references :
 - **UI layer** -https://developer.android.com/topic/architecture/ui-layer
 - **Flow** -https://kotlinlang.org/docs/flow.html
 - **Room** -https://developer.android.com/training/data-storage/room
+
+
+#Application Guide
+- **BaseStructure** Consider structure of the Application Layers of Clean Architecture
+  Presentation: A layer that interacts with the UI.
+  Use cases: Sometimes called interactors. Defines actions the user can trigger.
+  Domain: Contains the business logic of the app.
+  Data: Abstract definition of all the data sources.
+  Framework: Implements interaction with the Android SDK and provides concrete implementations for the data layer.
+- **remote-categories** Call Genres Api with Update Data in UI view
+- **remote-movies-list** Call Movies List Api with Update Data in UI view
+- **remote-movie-details** make parcelable model with sending list to movie details page
+- **room-structure** making room layer (Dao - AppDatabase - Entity)
+- **work-manager** caching data in room and create work manager every 4 hour call to call api
+- **main** master of application
