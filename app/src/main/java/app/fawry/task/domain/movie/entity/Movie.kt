@@ -21,45 +21,31 @@ data class Movie(
   @SerializedName("id")
   @ColumnInfo(name = "id")
   @Expose var id: Int = 0,
-  @ColumnInfo(name = "details")
-  var details: String = "",
   @SerializedName("adult")
-  @Ignore
-  @Expose val adult: Boolean = false,
+  @Expose var adult: Boolean = false,
   @SerializedName("backdrop_path")
-  @Ignore
-  @Expose val backdropPath: String = "",
+  @Expose var backdropPath: String = "",
   @SerializedName("genre_ids")
   @Ignore
-  @Expose val genreIds: List<Int> = listOf(),
+  @Expose var genreIds: List<Int> = listOf(),
   @SerializedName("original_language")
-  @Ignore
-  @Expose val originalLanguage: String = "",
+  @Expose var originalLanguage: String = "",
   @SerializedName("original_title")
-  @Ignore
-  @Expose val originalTitle: String = "",
+  @Expose var originalTitle: String = "",
   @SerializedName("overview")
-  @Ignore
   @Expose var overview: String = "",
   @SerializedName("popularity")
-  @Ignore
   @Expose var popularity: Double = 0.0,
   @SerializedName("poster_path")
-  @Ignore
   @Expose var posterPath: String = "",
   @SerializedName("release_date")
-  @Ignore
   @Expose var releaseDate: String = "",
   @SerializedName("title")
-  @Ignore
   @Expose var title: String = "",
   @SerializedName("video")
-  @Ignore
-  @Expose val video: Boolean = false,
+  @Expose var video: Boolean = false,
   @SerializedName("vote_average")
-  @Ignore
   @Expose var voteAverage: Double = 0.0,
   @SerializedName("vote_count")
-  @Ignore
   @Expose var voteCount: Int = 0
 ) : Parcelable

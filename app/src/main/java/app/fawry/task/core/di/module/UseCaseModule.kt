@@ -1,8 +1,10 @@
 package app.fawry.task.core.di.module
 
-import app.fawry.task.domain.category.repository.CategoryRepository
+import app.fawry.task.domain.category.repository.CategoryLocalRepository
+import app.fawry.task.domain.category.repository.CategoryRemoteRepository
 import app.fawry.task.domain.category.use_case.CategoryUseCase
-import app.fawry.task.domain.movie.repository.MovieRepository
+import app.fawry.task.domain.movie.repository.MovieLocalRepository
+import app.fawry.task.domain.movie.repository.MovieRemoteRepository
 import app.fawry.task.domain.movie.use_case.MovieUseCase
 import dagger.Module
 import dagger.Provides
@@ -18,12 +20,14 @@ class UseCaseModule {
   @Provides
   @Singleton
   fun provideHomeUseCase(
-    repository: CategoryRepository
-  ): CategoryUseCase = CategoryUseCase(repository)
+    repositoryRemote: CategoryRemoteRepository,
+    repositoryLocal: CategoryLocalRepository,
+  ): CategoryUseCase = CategoryUseCase(repositoryRemote,repositoryLocal)
 
   @Provides
   @Singleton
   fun provideMovieUseCase(
-    repository: MovieRepository
+    repository: MovieRemoteRepository,
   ): MovieUseCase = MovieUseCase(repository)
+
 }

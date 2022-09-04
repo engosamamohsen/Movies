@@ -33,6 +33,14 @@ object Libraries {
   const val chuckLogging = "com.readystatesoftware.chuck:library:${Versions.chuckLogging}"
   const val alerter = "com.github.tapadoo:alerter:${Versions.alerter}"
 
+  //work-manager
+  const val workManager = "androidx.work:work-runtime-ktx:${Versions.workVersion}"
+  const val hiltWorkManager = "androidx.hilt:hilt-work:${Versions.hiltWorkVersion}"
+  const val hiltCommonWorkManager = "androidx.hilt:hilt-common:${Versions.hiltWorkVersion}"
+  const val hiltCompilerWorkManager = "androidx.hilt:hilt-compiler:${Versions.hiltWorkVersion}"
+
+
+
   //Image
   const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
   const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"

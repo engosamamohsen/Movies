@@ -8,10 +8,8 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 
-@Entity(
-  tableName = "category",
-)
 /** room category structure(roomId - id - name) **/
+@Entity(tableName = "category")
 @Keep
 data class Category(
   @PrimaryKey(autoGenerate = true)

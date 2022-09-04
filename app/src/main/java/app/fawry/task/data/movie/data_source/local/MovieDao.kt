@@ -12,6 +12,10 @@ interface MovieDao {
   @Query("Select * from movie")
   fun getMovies(): Flow<List<Movie>>
 
+  @Query("Select COUNT (*) from movie")
+  fun count(): Flow<Int>
+
+
   @Insert(onConflict = OnConflictStrategy.REPLACE)
   fun insert(order: List<Movie>)
 }

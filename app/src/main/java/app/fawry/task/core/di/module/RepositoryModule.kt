@@ -1,11 +1,17 @@
 package app.fawry.task.core.di.module
 
+import app.fawry.task.data.category.data_source.local.CategoryLocalDataSource
 import app.fawry.task.data.category.data_source.remote.CategoryRemoteDataSource
-import app.fawry.task.data.category.repository.CategoryRepositoryImpl
+import app.fawry.task.data.category.repository.CategoryLocalRepositoryImpl
+import app.fawry.task.data.category.repository.CategoryRemoteRepositoryImpl
+import app.fawry.task.data.movie.data_source.local.MovieLocalDataSource
 import app.fawry.task.data.movie.data_source.remote.MovieRemoteDataSource
-import app.fawry.task.data.movie.repository.MovieRepositoryImpl
-import app.fawry.task.domain.category.repository.CategoryRepository
-import app.fawry.task.domain.movie.repository.MovieRepository
+import app.fawry.task.data.movie.repository.MovieLocalRepositoryImpl
+import app.fawry.task.data.movie.repository.MovieRemoteRepositoryImpl
+import app.fawry.task.domain.category.repository.CategoryLocalRepository
+import app.fawry.task.domain.category.repository.CategoryRemoteRepository
+import app.fawry.task.domain.movie.repository.MovieLocalRepository
+import app.fawry.task.domain.movie.repository.MovieRemoteRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,12 +27,25 @@ class RepositoryModule {
   @Singleton
   fun provideHomeRepository(
     remoteDataSource: CategoryRemoteDataSource
-  ): CategoryRepository = CategoryRepositoryImpl(remoteDataSource)
+  ): CategoryRemoteRepository = CategoryRemoteRepositoryImpl(remoteDataSource)
 
   @Provides
   @Singleton
   fun provideMovieRepository(
     remoteDataSource: MovieRemoteDataSource
-  ): MovieRepository = MovieRepositoryImpl(remoteDataSource)
+  ): MovieRemoteRepository = MovieRemoteRepositoryImpl(remoteDataSource)
 
+
+  @Provides
+  @Singleton
+  fun provideCategoryLocalRepository(
+    categoryLocalDataSource: CategoryLocalDataSource
+  ): CategoryLocalRepository = CategoryLocalRepositoryImpl(categoryLocalDataSource)
+
+
+  @Provides
+  @Singleton
+  fun provideMovieLocalRepository(
+    movieLocalDataSource: MovieLocalDataSource
+  ): MovieLocalRepository = MovieLocalRepositoryImpl(movieLocalDataSource)
 }

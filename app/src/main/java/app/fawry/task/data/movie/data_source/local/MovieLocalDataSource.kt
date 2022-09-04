@@ -6,9 +6,10 @@ import javax.inject.Inject
 
 class MovieLocalDataSource @Inject constructor(private val dao: MovieDao) :
   BaseRemoteDataSource() {
-  suspend fun getMovies() = safeApiCall {
-    dao.getMovies()
-  }
+
+  fun getMovies() = dao.getMovies()
+
+  fun count() = dao.count()
 
   suspend fun insert(list: List<Movie>) = safeApiCall {
     dao.insert(list)

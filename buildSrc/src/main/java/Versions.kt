@@ -30,6 +30,10 @@ object Versions {
   const val loadingAnimations = "3.6.0"
   const val alerter = "7.2.4"
 
+  //workManager
+  const val workVersion = "2.7.1"
+  const val hiltWorkVersion = "1.0.0"
+
   //image
   const val glide = "4.13.0"
 

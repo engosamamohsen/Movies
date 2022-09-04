@@ -51,8 +51,12 @@ class MoviesAdapter @Inject constructor() : RecyclerView.Adapter<MoviesAdapter.V
   }
 
   fun update(movies: List<Movie>) {
+    val size = differ.currentList.size
     differ.submitList(movies)
-    notifyItemRangeInserted(0,differ.currentList.size)
+    if(size == 0)
+      notifyItemRangeInserted(0,differ.currentList.size)
+    else
+      notifyItemRangeInserted(0,differ.currentList.size)
   }
 
   inner class ViewHolder(itemView: View) :

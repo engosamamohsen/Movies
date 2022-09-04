@@ -126,4 +126,11 @@ dependencies {
   implementation(Libraries.loadingAnimations)
   implementation(Libraries.alerter)
 
+  //Work-Manager
+  implementation(Libraries.workManager)
+  implementation(Libraries.hiltWorkManager)
+  implementation(Libraries.hiltCommonWorkManager)
+  kapt(Libraries.hiltCompilerWorkManager)
+
+
 }

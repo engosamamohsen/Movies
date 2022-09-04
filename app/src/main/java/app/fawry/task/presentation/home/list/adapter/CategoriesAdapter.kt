@@ -48,8 +48,12 @@ class CategoriesAdapter @Inject constructor() : RecyclerView.Adapter<CategoriesA
   }
 
   fun update(categories: List<Category>) {
+    val size = differ.currentList.size
     differ.submitList(categories)
-    notifyItemRangeInserted(0,differ.currentList.size)
+    if(size == 0)
+      notifyItemRangeInserted(0,differ.currentList.size)
+    else
+      notifyItemRangeInserted(0,differ.currentList.size)
   }
 
   inner class ViewHolder(itemView: View) :
