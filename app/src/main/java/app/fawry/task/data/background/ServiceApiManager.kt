@@ -30,8 +30,10 @@ class ServiceApiManager @AssistedInject constructor(
   lateinit var result: Result
   override suspend fun doWork(): Result {
     result = Result.failure()
+    Log.d(TAG, "doWork: WORKED")
     return when(val result = repository.getMovies()){
       is Resource.Success -> {
+        Log.d(TAG, "doWork: ${result.value.movies.size}")
         result.value.movies.map {
           it.posterPath = Constants.IMAGE_PATH + it.posterPath
         }

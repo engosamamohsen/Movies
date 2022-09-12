@@ -28,18 +28,8 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
       supportFragmentManager.findFragmentById(R.id.fragment_host_container) as NavHostFragment
     nav = navHostFragment.findNavController()
     appBarConfiguration = AppBarConfiguration(nav.graph)
-
     setSupportActionBar(binding.toolbar)
-    setupActionBarWithNavController(nav, appBarConfiguration)
-//    NavigationUI.setupActionBarWithNavController(this, nav, appBarConfiguration);
-
-    supportActionBar?.setDisplayHomeAsUpEnabled(true);
-    supportActionBar?.setDisplayShowHomeEnabled(true);
-
-
-    nav.addOnDestinationChangedListener { controller, destination, arguments ->
-
-    }
+    binding.toolbar.setupWithNavController(nav, appBarConfiguration)
   }
 
   override fun onSupportNavigateUp(): Boolean {

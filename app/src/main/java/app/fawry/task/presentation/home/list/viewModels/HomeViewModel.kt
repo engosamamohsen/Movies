@@ -53,6 +53,7 @@ class HomeViewModel @Inject constructor(
   init {
     viewModelScope.launch(Dispatchers.IO) {
       movieLocalDataSource.count().collect {//check data is cached before
+        Log.d(TAG, "count: $it")
         when (it) {
           0 -> {
             getCategories() //call categories api

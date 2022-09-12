@@ -3,6 +3,9 @@ package app.fawry.task.core
 import android.app.Application
 import android.content.Context
 import androidx.hilt.work.HiltWorkerFactory
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.OnLifecycleEvent
+import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.multidex.MultiDex
 import androidx.work.Configuration
 import dagger.hilt.android.HiltAndroidApp
@@ -31,4 +34,5 @@ class MyApplication : Application(), Configuration.Provider {
   fun onCreate() {
     super.onCreate()
   }
+
 }

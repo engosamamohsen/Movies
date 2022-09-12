@@ -6,6 +6,7 @@ object Config {
     const val versionCode = 1
     const val versionName = "0.0.1"
     const val testRunner = "androidx.test.runner.AndroidJUnitRunner"
+    const val coreKtx =  "androidx.core:core-ktx:1.6.0"
   }
 
   object Dependencies {

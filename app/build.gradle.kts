@@ -12,12 +12,16 @@ android {
   compileSdk = Config.AppConfig.compileSdkVersion
 
   defaultConfig {
+    configurations.all {
+      resolutionStrategy {
+        force(Config.AppConfig.coreKtx)
+      }
+    }
     applicationId = Config.AppConfig.appId
     minSdk = Config.AppConfig.minSdkVersion
     targetSdk = Config.AppConfig.compileSdkVersion
     versionCode = Config.AppConfig.versionCode
     versionName = Config.AppConfig.versionName
-
     vectorDrawables.useSupportLibrary = true
     multiDexEnabled = true
     testInstrumentationRunner = Config.AppConfig.testRunner
