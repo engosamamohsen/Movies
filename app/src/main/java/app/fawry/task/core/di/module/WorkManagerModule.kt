@@ -18,8 +18,7 @@ object WorkManagerModule {
   @Singleton
   fun providePeriodicWorkRequestUseCase() = PeriodicWorkRequest.Builder(
     ServiceApiManager::class.java,
-//    4 * 60, // 4 hour * 60 min
-    1, // 4 hour * 60 min
+    4 * 60, // 4 hour * 60 min
     TimeUnit.MINUTES
   ).setConstraints(
     Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()

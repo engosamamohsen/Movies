@@ -27,3 +27,5 @@ For more references :
 - **room-structure** making room layer (Dao - AppDatabase - Entity)
 - **work-manager** caching data in room and create work manager every 4 hour call api
 - **main** master of application
+- **work-manager** caching data in room and create work manager every 4 hour call api
+- **main** master of application
